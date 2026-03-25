@@ -126,6 +126,7 @@ public class MainViewerGUI extends JFrame
     public final JMenuItem zStringArrayDecrypter = new TranslatedJMenuItem("ZStringArray Decrypter", TranslatedComponents.ZSTRINGARRAY_DECRYPTER);
     public final JMenuItem viewAPKAndroidPermissions = new TranslatedJMenuItem("View Android Permissions", TranslatedComponents.VIEW_ANDROID_PERMISSIONS);
     public final JMenuItem viewManifest = new TranslatedJMenuItem("View Manifest", TranslatedComponents.VIEW_MANIFEST);
+    public final JMenuItem exportModifiedOnly = new TranslatedJMenuItem("Export Modified Only", TranslatedComponents.EXPORT_MODIFIED_ONLY); // serve la traduzione
     public final JMenuItem changeClassFileVersions = new TranslatedJMenuItem("Change ClassFile Versions", TranslatedComponents.CHANGE_CLASSFILE_VERSIONS);
 
     //all of the settings main menu components
@@ -674,6 +675,7 @@ public class MainViewerGUI extends JFrame
         pluginsMainMenu.add(viewAPKAndroidPermissions);
         pluginsMainMenu.add(new JSeparator());
         pluginsMainMenu.add(viewManifest);
+        pluginsMainMenu.add(exportModifiedOnly);
         pluginsMainMenu.add(codeSequenceDiagram);
         pluginsMainMenu.add(maliciousCodeScanner);
         pluginsMainMenu.add(showMainMethods);
@@ -702,6 +704,7 @@ public class MainViewerGUI extends JFrame
         zStringArrayDecrypter.addActionListener(arg0 -> PluginManager.runPlugin(new ZStringArrayDecrypter()));
         viewAPKAndroidPermissions.addActionListener(arg0 -> PluginManager.runPlugin(new ViewAPKAndroidPermissions()));
         viewManifest.addActionListener(arg0 -> PluginManager.runPlugin(new ViewManifest()));
+        exportModifiedOnly.addActionListener(arg0 -> PluginManager.runPlugin(new ExportModifiedOnly()));
         changeClassFileVersions.addActionListener(arg0 -> PluginManager.runPlugin(new ChangeClassFileVersions()));
     }
 
